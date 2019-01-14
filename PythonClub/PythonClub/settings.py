@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'xy(vhx@ood90*j6f41e(m7v0)z-82kskjj7v__@nteqmfimyxo'
+SECRET_KEY = 'j#(no2+-j3a6*dl@@0db79q=l9m#p^t((n$yle^&s!4da^m^he'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'club',
 ]
 
 MIDDLEWARE = [
@@ -75,8 +76,12 @@ WSGI_APPLICATION = 'PythonClub.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'pythonclubdb',
+        'USER': 'postgres',
+        'PASSWORD': 'P@ssw0rd1',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
